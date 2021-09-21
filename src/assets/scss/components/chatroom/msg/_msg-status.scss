@@ -1,0 +1,27 @@
+@mixin msg-status {
+  .msg-status {
+    margin-right: 5px;
+    user-select: none;
+    cursor: default;
+
+    &__text {
+      color: #9f9f9f;
+      font-size: 7px;
+      font-weight: bolder;
+      height: min-content;
+      vertical-align: baseline;
+      line-height: 1.1em;
+      cursor: default;
+      white-space: pre-line;
+
+      &--right {
+        text-align: right;
+      }
+
+      &--left {
+        text-align: left;
+      }
+    }
+  }
+
+}

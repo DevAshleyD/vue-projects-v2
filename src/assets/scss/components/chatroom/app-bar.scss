@@ -1,0 +1,53 @@
+@mixin app-bar {
+  .app-bar {
+    //position: fixed;
+    top: -2px;
+    user-select: none;
+    cursor: default;
+    font-weight: bolder;
+    z-index: 9999999;
+    height: min-content;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &__title {
+      position: relative;
+      margin-right: 1em;
+
+      @media screen and (max-width: 450px) {
+        font-size: .8rem;
+      }
+
+      &--room-name {
+        &-dark {
+          margin-left: 1em;
+          color: yellow;
+        }
+
+        &-light {
+          margin-left: 1em;
+          color: darkgoldenrod;
+        }
+      }
+    }
+
+    &__avatar {
+      position: absolute;
+      right: 0;
+      background-color: #f5f5f5;
+      padding: .2em;
+
+      &--dark-background {
+        background-color: #272727;
+      }
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}
+
+@include app-bar;

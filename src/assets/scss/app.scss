@@ -1,0 +1,32 @@
+@import "./shared/index";
+
+@include _reset;
+@include _font;
+@include drawer-overlay-layer;
+
+html,
+body,
+#app {
+  @include fix-100vh-in-mobile-WebKit;
+  margin: 0;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+
+  .v-application--wrap {
+    @include fix-100vh-in-mobile-WebKit;
+  }
+}
+
+body {
+  .dark-background {
+    overflow: auto;
+    overscroll-behavior: contain;
+    -ms-scroll-chaining: none;
+    background-color: #272727;
+  }
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}

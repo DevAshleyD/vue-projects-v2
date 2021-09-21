@@ -1,0 +1,8 @@
+@mixin bottom-controller {
+  #bottom-controller {
+    //position: fixed;
+    bottom: 0;
+  }
+}
+
+@include bottom-controller;
